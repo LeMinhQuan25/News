@@ -1,0 +1,452 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,500&display=swap'); */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Poppins',sans-serif;
+}
+
+.clear {
+    clear: both;
+}
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-half {
+    width: 50%;
+}
+
+.col-full {
+    width: 100%;
+}
+
+.mt-8 {
+    margin-top: 8px !important;
+}
+
+.mt-16 {
+    margin-top: 16px !important;
+}
+
+#main {
+
+}
+
+/* Đầu trang */
+#header {
+    height: 45px;
+    background-color: var(--gray-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    padding: 0 200px;
+} 
+
+menu {
+    display: inline-block;
+}
+
+#menu li {
+    display: inline-block;      
+}
+
+#menu li a {
+    color: var(--black-color);
+    display: inline-block;
+    text-decoration: none;
+    line-height: 45px;
+    padding: 0 30px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+#menu li:hover a {
+    color: var(--while-color);
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+
+/* Ảnh động */
+.slider {
+    margin-top: 45px;
+    z-index: 1;
+}
+
+.slider-item {
+    width: 100vw;
+    height: 100vh;  
+    position: relative;
+}
+
+.slider-item::before {
+    content: " ";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+}
+
+.slider-item-one {
+    background: url('/assets/img/Slider/Slider01.jpg') top center / cover no-repeat;
+}
+
+.slider-item-two {
+    background: url('/assets/img/Slider/Slider02.jpg') top center / cover no-repeat;
+}
+
+.slider-item-three {
+    background: url('/assets/img/Slider/Slider03.jpg') top center / cover no-repeat;
+}
+
+.slider-item-four {
+    background: url('/assets/img/Slider/Slider04.jpg') top center / cover no-repeat;
+}
+/* Các thanh điều khiển qua lại của slider */
+.owl-prev {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px!important;
+    color: #fff!important;
+}
+
+.owl-next {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px!important;
+    color: #fff!important;
+}
+
+.owl-prev, .owl-next:hover{
+    background: none!important;
+}
+
+.owl-dots {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-35%);
+}
+
+.owl-dot span {
+    width: 15px!important;
+    height: 15px!important;
+    margin: 0!important;
+    background-color: transparent!important; 
+}
+
+.owl-dot {
+    width: 23px;
+    height: 23px;
+    border: 2px solid #fff!important;
+    border-radius: 50%;
+    display: flex!important;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+.owl-dot.active span{
+    background-color: var(--primary-color)!important;
+}
+/* Nội dung hiển thị trên ảnh động */
+.slider-item {
+    display: flex;
+    align-items: center;
+}
+
+.slider-item .wraper {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    position: relative;
+}
+
+.slider-item .slider-item-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.slider-item .slider-item-name {
+    color: #fff;
+    letter-spacing:6px;
+    font-size: 40px;
+}
+
+.slider-item .slider-item-slogan {
+    color: #fff;
+    padding: 20px 0;
+    font-size: 30px;
+}
+/* Nội dung trang web*/
+#contact {
+    padding: 0 180px;
+}
+/* Các tiêu đề của nội dung */
+#contact .contact-section {
+    width: 1200px;
+    padding: 64px 0 0 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#contact .section-heading,
+#contact .section-sub-heading {
+    text-align: center;
+}
+
+#contact .section-heading {
+    font-size: 30px;
+    font-weight: 500;
+    /* dãn cái chữ cái */
+    letter-spacing: 4px; 
+}
+
+#contact .section-sub-heading {
+    font-size: 15px;
+    margin-top: 20px;
+    /* chữ nghiên */
+    font-style: italic;
+    /* độ mờ của chữ */
+    opacity: 0.6;
+}
+/* Các tin tức */
+#contact .news-section {
+
+}
+
+#contact .news-list {
+    margin: 32px -8px 0;
+}
+
+#contact .news-item {
+    float: left;
+    width: 32%;
+    padding: 20px 8px;
+}
+
+#contact .news-img {
+    width: 373px;
+    height: 300px;
+    display: block;
+}
+
+#contact .news-img:hover {
+    opacity: 0.7;
+}
+
+#contact .news-content {
+    padding: 16px;
+    font-size: 15px;
+    text-align: center;
+    width: 373px;
+    height: 172px;
+}
+
+#contact .news-heading {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+#contact .news-desc {
+    margin-top: 15px;
+    line-height: 1.6;
+    height: 48px;
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+}
+
+#contact .news-inf-btn {
+    color: var(--while-color);
+    background-color: var(--primary-color);
+    text-decoration: none;
+    padding: 8px 80px;
+    display: inline-block;
+    border-radius: 3px;
+    margin-top: 15px;
+}
+
+#contact .news-inf-btn:hover {
+    opacity: 0.8;
+}
+
+/* Các bài review, đánh giá sản phẩm */
+#contact .contact-section-review {
+    /* padding: 10px 0 0 0; */
+}
+
+#contact .contact-section-review01 {
+    width: 380px;
+    height: auto;
+    display: inline-block;
+}
+
+#contact .contact-section-reviewlist {
+    
+}
+
+#contact .review-item {
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+}
+
+#contact .review-heading {
+    padding: 8px;
+    font-size: 20px;
+    color: var(--black-color);
+}
+
+#contact .review-text {
+    font-size: 15px;
+    color: var(--black-color);
+    /* Hiển thị dấu ... khi nội dung vượt quá quy định */
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    text-overflow: ellipsis;
+}
+
+#contact .review-heading:hover {
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+
+}
+
+#contact .contact-section-review02 {
+    width: 380px;
+    height: auto;
+    display: inline-block;
+    text-align: center;
+}
+#contact .img-logo {
+    width: 350px;
+    height: 350px;
+    transform: translateY(-20%);
+}
+
+#contact .contact-section-review03 {
+    width: 380px;
+    height: auto;
+    display: inline-block;
+}
+
+/* Các thông tin liên hệ */
+#contact .contact-information {
+    margin-top: 40px;
+}
+
+#contact .info-list {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+#contact .info-list i[class*="ti-"] {
+    width: 30px;
+    display: inline-block;
+}
+
+#contact .info {
+    margin: 60px 0;
+}
+
+#contact .contact-form {
+    font-size: 15px;    
+}
+
+.contact-form .form-control {
+    padding: 10px;
+    border: 1px solid var(--gray-color);
+    width: 100%;
+}
+
+.contact-form .form-submit-btn {
+    background-color: var(--primary-color);
+    color: var(--while-color);
+    border: 1px solid var(--black-color);
+    padding: 10px 30px;
+    float: right;
+}
+
+.contact-form .form-submit-btn:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+/* Bản đồ công nghệ và câu slogan của trang web */
+.map-section img {
+    width: 100%;
+    padding: 60px 0 0 0;
+}
+
+.map-text {
+    display: inline-block;
+    color: var(--primary-color);
+    text-align: center;
+    width: 100%;
+    font-size: 30px;
+    margin-top: 20px;
+}
+/* Cuối trang web*/
+#footer {
+    padding: 64px 16px;
+    text-align: center;
+}
+
+#footer .socials-list {
+    font-size: 24px;
+}
+
+#footer .socials-list a {
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+}
+
+#footer .copyright a:hover,
+#footer .socials-list a:hover {
+    color: var(--primary-color);
+}
+
+#footer .copyright {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 15px;
+}
+
+#footer .copyright a {
+    color: rgba(0, 0, 0, 0.6);
+}
